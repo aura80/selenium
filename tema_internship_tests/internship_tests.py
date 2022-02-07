@@ -6,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 # from selenium.webdriver import ActionsChains
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 driver = selenium.webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -53,11 +54,11 @@ time.sleep(3.0)
 deal = driver.find_element(By.CSS_SELECTOR, 'button[data-bdd="farefinder-package-search-button"]')
 deal.click()
 #time.sleep(1,0)
-deal = driver.get("https://vacation.hotwire.com/Hotel-Search?adults=2&airlineCode&cabinClass=COACH&destination=Los%20Angeles%20%28and%20vicinity%29%2C%20California%2C%20United%20States%20of%20America&directFlights=false&dropOffTime=1030&endDate=2022-02-08&infantsInSeats=0&mdpcid=50572-30031.5707879897&misId=AgitmuXO5Zjd_hIQyrqqxai-2-KTASD-19wu~ARIIGgIIAiDo8AoaMggBEhYKA1NGTxjTjL0CKgoyMDIyLTAyLTA3EhYKA0xBWBjMguECKgoyMDIyLTAyLTA4IgA&origin=San%20Francisco%2C%20CA%2C%20United%20States%20of%20America%20%28SFO-San%20Francisco%20Intl.%29&paandi=true&packageType=fhc&partialStay=false&pickUpTime=1030&regionId=178280&searchProduct=hotel&semdtl=&sort=RECOMMENDED&startDate=2022-02-07&theme=&tmid=32213609859&tripType=ROUND_TRIP&useRewards=false&userIntent=")
-search = driver.find_element(By.CSS_SELECTOR, 'div.uitk-cell > button[datastid="submit-hotel-search"]')
-search.click()
-time.sleep(4.0)
-driver.close()
+# deal = driver.get("https://vacation.hotwire.com/Hotel-Search?adults=2&airlineCode&cabinClass=COACH&destination=Los%20Angeles%20%28and%20vicinity%29%2C%20California%2C%20United%20States%20of%20America&directFlights=false&dropOffTime=1030&endDate=2022-02-08&infantsInSeats=0&mdpcid=50572-30031.5707879897&misId=AgitmuXO5Zjd_hIQyrqqxai-2-KTASD-19wu~ARIIGgIIAiDo8AoaMggBEhYKA1NGTxjTjL0CKgoyMDIyLTAyLTA3EhYKA0xBWBjMguECKgoyMDIyLTAyLTA4IgA&origin=San%20Francisco%2C%20CA%2C%20United%20States%20of%20America%20%28SFO-San%20Francisco%20Intl.%29&paandi=true&packageType=fhc&partialStay=false&pickUpTime=1030&regionId=178280&searchProduct=hotel&semdtl=&sort=RECOMMENDED&startDate=2022-02-07&theme=&tmid=32213609859&tripType=ROUND_TRIP&useRewards=false&userIntent=")
+# search = driver.find_element(By.CSS_SELECTOR, 'div.uitk-cell > button[datastid="submit-hotel-search"]')
+# search.click()
+# time.sleep(4.0)
+# driver.close()
 
 drivere = selenium.webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 deals = drivere.get("https://vacation.hotwire.com/Hotel-Search?adults=2&airlineCode&cabinClass=COACH&destination=Los%20Angeles%20%28and%20vicinity%29%2C%20California%2C%20United%20States%20of%20America&directFlights=false&dropOffTime=1030&endDate=2022-02-08&infantsInSeats=0&mdpcid=50572-30031.5707879897&misId=AgitmuXO5Zjd_hIQyrqqxai-2-KTASD-19wu~ARIIGgIIAiDo8AoaMggBEhYKA1NGTxjTjL0CKgoyMDIyLTAyLTA3EhYKA0xBWBjMguECKgoyMDIyLTAyLTA4IgA&origin=San%20Francisco%2C%20CA%2C%20United%20States%20of%20America%20%28SFO-San%20Francisco%20Intl.%29&paandi=true&packageType=fhc&partialStay=false&pickUpTime=1030&regionId=178280&searchProduct=hotel&semdtl=&sort=RECOMMENDED&startDate=2022-02-07&theme=&tmid=32213609859&tripType=ROUND_TRIP&useRewards=false&userIntent=")
