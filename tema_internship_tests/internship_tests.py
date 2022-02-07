@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 # from selenium.webdriver import ActionsChains
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # from selenium import webdriver
 # chrome_options = webdriver.ChromeOptions()
@@ -66,14 +67,15 @@ class test_Travel:
         time.sleep(1.0)
         driver.quit()
 
-r1 = test_Travel
-r1.test_Fly_from()
-r2 = test_Travel
-r2.test_Fly_to()
-r3 = test_Travel
-r3.test_Time()
-r4 = test_Travel
-r4.test_New()
+if __name__ == '__main__':
+    r1 = test_Travel
+    r1.test_Fly_from()
+    r2 = test_Travel
+    r2.test_Fly_to()
+    r3 = test_Travel
+    r3.test_Time()
+    r4 = test_Travel
+    r4.test_New()
 
 #driver.quit()
 
