@@ -2,9 +2,8 @@ import time
 import datetime
 from datetime import datetime
 from datetime import timedelta
-
+import pytest
 import selenium.webdriver
-
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -37,7 +36,7 @@ class test_Travel(unittest.TestCase):
         ret_date = driver.find_element(By.CSS_SELECTOR, 'td[aria-label="February 28, 2022"]')
         ret_date.click()
 
-        #time.sleep(3.0)
+        time.sleep(3.0)
 
     def test_PickUP(self):
         car = driver.find_element(By.CSS_SELECTOR, 'button[data-bdd="farefinder-package-bundleoption-car"]').click()
@@ -85,10 +84,11 @@ class test_Travel(unittest.TestCase):
         dep_date.click()
         ret_date = driver.find_element(By.CSS_SELECTOR, date_back)
         ret_date.click()
+        time.sleep(3)
+        driver.quit()
 
     if __name__ == '__main__':
         unittest.main()
-        driver.quit()
 
 
 
